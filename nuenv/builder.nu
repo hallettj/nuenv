@@ -53,7 +53,7 @@ if $nix.debug {
   info $"Realising the (blue $drv.name) derivation for (blue $drv.system)"
 
   let numCores = ($env.NIX_BUILD_CORES | into int)
-  info $"Running on (blue $numCores) core(if ($numCores > 1) { "s" })"
+  info $"Running on (blue ($numCores | into string)) core(if ($numCores > 1) { "s" })"
 
   info $"Using Nushell (blue $nushell.version)"
 
