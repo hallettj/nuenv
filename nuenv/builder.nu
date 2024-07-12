@@ -43,7 +43,7 @@ let drv = {
 let nix = {
   sandbox: $env.NIX_BUILD_TOP, # Sandbox directory
   store: $env.NIX_STORE, # Nix store root
-  debug: (envToBool $attrs.__nu_debug) # Whether `debug = true` is set in the derivation
+  debug: $attrs.__nu_debug # Whether `debug = true` is set in the derivation
 }
 
 ## Provide info about the current derivation
